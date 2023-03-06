@@ -15,9 +15,15 @@ Where $ X_{1m} $ and $ X_{0m} $ denotes m "predictor" for treated and control un
 
 For technical details, the computation of synthetic control is a nested optimization problem (with W, V), hence,  W is optimized using cxvpy package and V is optimized using scipy minimize function with Nelder-Mead as default method.
 
+
+
+
+
+
 Notes:
 This is part of UCLA Master of Quantitative Economics program (MQE), capstone project for winter 2023.
 Capstone Title: The effect of Thailand 2014 regime changes: evidence using synthetic control.
+
 
 Reference:
 Abadie, A., Diamond, A., & Hainmueller, J. (2015). “Comparative Politics and the Synthetic Control” Method. American Journal of Political Science, 59(2), 495–510. DOI:10.2139/ssrn.1950298
