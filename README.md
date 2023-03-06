@@ -6,7 +6,7 @@ This package provide function for computation and analysis of synthetic control 
 
 # Details on synthetic control
   $$ W = argmin_w \Sigma_{m=1}^{k}v_m(X_{1m}-X_{0m}w)^2 $$
-  
+ghghghgh
   $$ V = argmin_v  \left( \frac{1}{T}\Simga_{t=1}^{T} \left( Y_{1t}- \Sigma_{j=1}^JW^{\`}Y_{0t}\right)^2 \right)^{1/2} $$
 Notes:
 This is part of UCLA Master of Quantitative Economics program (MQE), capstone project for winter 2023.
