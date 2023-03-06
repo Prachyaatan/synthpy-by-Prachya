@@ -9,7 +9,7 @@ Suppose that the outcome variable of the treated unit at time t is $ Y_{1t} $ an
 
   $$ W = argmin_w \Sigma_{m=1}^{k}v_m(X_{1m}-X_{0m}w)^2 $$
   
-Where $ X_{1m} $ and $ X_{0m} $ denotes m "predictor" for treated and control unit respectively, the predictors is a scarlar that represent each characteristic of a particular unit which the outcome variable can be included as well. The default setting for predictors is the mean, averging the variable over pretreatment period and these predictors are standardized accross all characteritic. $ v_m $ represents variable weight that give weights to each characteristic. Intutitively, the more important the variable, the more weight is given. To select  $ v_m $ , pretreatment data is split into training and validation period where the optimal set of V is the one that minimize the root mean square prediction error (RMSPE) in the validation set. The RMSPE is given as follows: *notes: suppose that validation period indexed from 1 to $ T_0 $
+Where $ X_{1m} $ and $ X_{0m} $ denotes m "predictor" for treated and control unit respectively, the predictors is a scarlar that represent each characteristic of a particular unit which the outcome variable can be included as well. The default setting for predictors is the mean, averging the variable over pretreatment period and these predictors are standardized accross all characteritic. $ v_m $ represents variable weight that give weights to each characteristic. Intutitively, the more important the variable, the more weight is given. To select  $ v_m $ , pretreatment data is split into training and validation period where the optimal set of V is the one that minimize the root mean square prediction error (RMSPE) in the validation set. Let the validation period indexed from 1 to $ T_0 $ , then RMSPE is given as follows:
 
   $$ V = argmin_v  \left( \frac{1}{T_0}\Sigma_{t=1}^{T_0} \left( Y_{1t}- \Sigma_{j=1}^JW^{\`}Y_{0t}\right)^2 \right)^{1/2} $$
 
@@ -20,7 +20,7 @@ For technical details, the computation of synthetic control is a nested optimiza
 ````
 
 **Notes**:
-This is part of UCLA Master of Quantitative Economics program (MQE), capstone project for winter 2023.
+This is a part of UCLA Master of Quantitative Economics program (MQE), capstone project for winter 2023.
 Capstone Title: The effect of Thailand 2014 regime changes: evidence using synthetic control.
 
 
