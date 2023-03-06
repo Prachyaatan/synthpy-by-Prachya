@@ -5,7 +5,7 @@ Created by Prachya Tantivatana.
 This package provide function for computation and analysis of synthetic control method using framework laid out by Abadie, Diamond & Haimueller (2015). Synthetic control implemented in this package is used for measuring a treatment effect on a particular outcome variable of a single treated unit using a weight-averaged of a the same variable of control units to create a "counter-factual" of the treated unit when the treatment did not occur. The weight assigned to control is sum up to one and is between (0,1). Characteristic variable can also be included as predictor for the computation of weight. Additionally, this package include visualization function, computation of confidence interval using leave-one-out and hypothesistest function from placebo treatment.
 
 # Details
-Suppose that the outcome variable of the treated unit at time t is $ Y_{1t} $ and for control unit it is $ Y_{0t} $. A synthetic control is a weighted average of the characteristics of control unit such that it best resemble the treated unit during pretreatment period. In other words, it is as follows,
+Suppose that the outcome variable of the treated unit at time t is $Y_{1t}$ and for control unit it is $ Y_{0t} $. A synthetic control is a weighted average of the characteristics of control unit such that it best resemble the treated unit during pretreatment period. In other words, it is as follows,
 
   $$ W = argmin_w \Sigma_{m=1}^{k}v_m(X_{1m}-X_{0m}w)^2 $$
   
