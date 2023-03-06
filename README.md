@@ -16,9 +16,9 @@ Where $ X_{1m} $ and $ X_{0m} $ denotes m "predictor" for treated and control un
 For technical details, the computation of synthetic control is a nested optimization problem (with W, V), hence,  W is optimized using cxvpy package and V is optimized using scipy minimize function with Nelder-Mead as default method.
 
 
-
-
-
+\n
+\n
+\n
 
 Notes:
 This is part of UCLA Master of Quantitative Economics program (MQE), capstone project for winter 2023.
