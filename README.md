@@ -14,7 +14,12 @@ Where $X_{1m}$ and $X_{0m}$ denotes m "predictor" for treated and control unit r
 
   $$ V = argmin_v  \left( \frac{1}{T_0}\Sigma_{t=1}^{T_0} \left( Y_{1t}- \Sigma_{j=1}^JW^{\`}Y_{0t}\right)^2 \right)^{1/2} $$
 
-For technical details, the computation of synthetic control is a nested optimization problem (with W, V), hence,  W is optimized using [cxvpy](https://www.cvxpy.org/) package and V is optimized using [scipy optimize](https://docs.scipy.org/doc/scipy/reference/optimize.html#module-scipy.optimize) function with Nelder-Mead as default method.
+## Technical details 
+1) the computation of synthetic control is a nested optimization problem (with W, V), hence,  W is optimized using [cxvpy](https://www.cvxpy.org/) package and V is optimized using [scipy optimize](https://docs.scipy.org/doc/scipy/reference/optimize.html#module-scipy.optimize) function with Nelder-Mead as default method.
+
+2) Confidencial interval is constructed by aggregating the treatment effect (difference between actual and synthetic) over all leave-on-out (LOO) samples, a baseline analysis but with one control unit dropped. With the LOO samples, its mean and standard error will be computed to create the interval with $\alpha$ confidence level
+
+3) Two-tail interval for hypothesis test is constructed using a permutation of place which is created by assigning the treatment to one control unit in period prior to the actual treatment, (e.g. for 10 control units and 5 place year there will be 50 permutation of placebos). The treatment effect will then be tested against the interval from these placbos, intuititively, treatment effect is significant if it is statistically differents from the placebo effect.
 
 
 ````
