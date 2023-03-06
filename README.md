@@ -13,17 +13,16 @@ Where $ X_{1m} $ and $ X_{0m} $ denotes m "predictor" for treated and control un
 
   $$ V = argmin_v  \left( \frac{1}{T_0}\Sigma_{t=1}^{T_0} \left( Y_{1t}- \Sigma_{j=1}^JW^{\`}Y_{0t}\right)^2 \right)^{1/2} $$
 
-For technical details, the computation of synthetic control is a nested optimization problem (with W, V), hence,  W is optimized using cxvpy package and V is optimized using scipy minimize function with Nelder-Mead as default method.
+For technical details, the computation of synthetic control is a nested optimization problem (with W, V), hence,  W is optimized using [cxvpy](https://www.cvxpy.org/) package and V is optimized using [scipy optimize](https://docs.scipy.org/doc/scipy/reference/optimize.html#module-scipy.optimize) function with Nelder-Mead as default method.
 
 
-\n
-\n
-\n
+````
+````
 
-Notes:
+**Notes**:
 This is part of UCLA Master of Quantitative Economics program (MQE), capstone project for winter 2023.
 Capstone Title: The effect of Thailand 2014 regime changes: evidence using synthetic control.
 
 
-Reference:
+**Reference**:
 Abadie, A., Diamond, A., & Hainmueller, J. (2015). “Comparative Politics and the Synthetic Control” Method. American Journal of Political Science, 59(2), 495–510. DOI:10.2139/ssrn.1950298
